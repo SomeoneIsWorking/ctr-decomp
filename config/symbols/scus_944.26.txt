@@ -46,6 +46,7 @@ UI_DrawBattleScores = 0x80050654; // type:func
 UI_Weapon_DrawSelf = 0x800507E0; // type:func
 UI_Weapon_DrawBG = 0x80050AF8; // type:func
 UI_DrawNumWumpa = 0x80050C20; // type:func
+RenderBucket_Execute = 0x8006AAA8; // type:func
 UI_DrawNumTimebox = 0x80050E6C; // type:func
 UI_DrawSpeedNeedle = 0x800511C0; // type:func
 UI_DrawSpeedBG = 0x800516AC; // type:func

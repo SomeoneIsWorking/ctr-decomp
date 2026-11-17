@@ -18,6 +18,26 @@ ctr-native's.
 | `0x1D30` | DrawSync pending byte, cleared by `DrawSyncCallback` |
 | `0x24EC` | drivers (`drivers[8]`) |
 
+## Driver
+
+| offset | field |
+|---|---|
+| `0x2D4` | position x, y, z (`posCurr`, 1/256 units) |
+| `0x498` | the rank digit's HUD instance (`instBigNum`), drawn in the player's view |
+| `0x49C` | the wumpa fruit's HUD instance (`instFruitDisp`), drawn in its own view |
+
+## Instance
+
+| offset | field |
+|---|---|
+| `0x74` | per-player draw state (`idpp[0]`): its view first; `+0x78..+0x94` the rotation and translation loaded as GTE R/TR |
+
+## RenderBucket_Execute
+
+`RenderBucket_Execute(list, primMem)` draws every queued instance: `list` is pairs of words (model header, instance),
+ended by a zero header; each pair's packets go to `primMem`'s pool in turn, the cursor held in `v0` and stored back at
+the end, so one instance's packets are contiguous.
+
 ## View (push buffer, `0x110` bytes)
 
 | offset | field |
