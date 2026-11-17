@@ -1,1 +1,2 @@
 // ov226: BIGFILE.BIG entry 226, loaded at 0x800A0CB8.
+DrawLevelOvr1P = 0x800A0CBC; // type:func
