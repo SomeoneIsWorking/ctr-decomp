@@ -1,0 +1,42 @@
+name: SCUS_944.26
+sha1: 1fd69c9f69890d66778d10fdfd8ed5c9013f4b3a
+options:
+  basename: scus_944.26
+  target_path: disc/SCUS_944.26
+  base_path: ..
+  asm_path: asm/scus_944.26
+  src_path: src/scus_944.26
+  asset_path: assets/scus_944.26
+  build_path: build
+  ld_script_path: build/scus_944.26.ld
+  symbol_addrs_path:
+    - config/symbols/scus_944.26.txt
+  undefined_funcs_auto_path: build/scus_944.26.undefined_funcs_auto.txt
+  undefined_syms_auto_path: build/scus_944.26.undefined_syms_auto.txt
+  platform: psx
+  compiler: PSYQ
+  find_file_boundaries: False
+  gp_value: 0x8008CF6C
+  o_as_suffix: True
+  use_legacy_include_asm: False
+  section_order: [".rodata", ".text", ".data", ".bss"]
+  subalign: 2
+  string_encoding: ASCII
+  data_string_encoding: ASCII
+  rodata_string_guesser_level: 2
+  data_string_guesser_level: 2
+segments:
+  - name: header
+    type: header
+    start: 0x0
+  - name: main
+    type: code
+    start: 0x800
+    vram: 0x80010000
+    bss_size: 0x11EFC
+    subsegments:
+      - [0x800, rodata]
+      - [0x2BE0, asm]
+      - [0x711A0, data]
+      - { start: 0x7E000, type: bss, vram: 0x8008D800 }
+  - [0x7E000]

@@ -1,0 +1,43 @@
+name: BIGFILE.BIG entry 232
+sha1: 5501bef2521df6a930d6bf4f8f3a951e56af8ab7
+options:
+  basename: ov232
+  target_path: disc/BIGFILE.BIG
+  base_path: ../..
+  asm_path: asm/ov232
+  src_path: src/ov232
+  asset_path: assets/ov232
+  build_path: build
+  ld_script_path: build/ov232.ld
+  symbol_addrs_path:
+    - config/symbols/scus_944.26.txt
+    - config/symbols/ov232.txt
+  undefined_funcs_auto_path: build/ov232.undefined_funcs_auto.txt
+  undefined_syms_auto_path: build/ov232.undefined_syms_auto.txt
+  platform: psx
+  compiler: PSYQ
+  find_file_boundaries: False
+  gp_value: 0x8008CF6C
+  global_vram_start: 0x80010000
+  global_vram_end: 0x8009F6FC
+  o_as_suffix: True
+  use_legacy_include_asm: False
+  section_order: [".rodata", ".text", ".data", ".bss"]
+  subalign: 2
+  string_encoding: ASCII
+  data_string_encoding: ASCII
+  rodata_string_guesser_level: 2
+  data_string_guesser_level: 2
+segments:
+  - name: archive_before
+    type: pad
+    start: 0x0
+  - name: ov232
+    type: code
+    start: 0x6895000
+    vram: 0x800AB9F0
+    subsegments:
+      - [0x6895000, data]
+      - [0x689510C, asm]
+      - [0x689E3EC, data]
+  - [0x689EC84]

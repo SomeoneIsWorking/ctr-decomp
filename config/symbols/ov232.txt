@@ -1,0 +1,1 @@
+// ov232: BIGFILE.BIG entry 232, loaded at 0x800AB9F0.

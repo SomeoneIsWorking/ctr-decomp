@@ -1,0 +1,43 @@
+name: BIGFILE.BIG entry 229
+sha1: 5501bef2521df6a930d6bf4f8f3a951e56af8ab7
+options:
+  basename: ov229
+  target_path: disc/BIGFILE.BIG
+  base_path: ../..
+  asm_path: asm/ov229
+  src_path: src/ov229
+  asset_path: assets/ov229
+  build_path: build
+  ld_script_path: build/ov229.ld
+  symbol_addrs_path:
+    - config/symbols/scus_944.26.txt
+    - config/symbols/ov229.txt
+  undefined_funcs_auto_path: build/ov229.undefined_funcs_auto.txt
+  undefined_syms_auto_path: build/ov229.undefined_syms_auto.txt
+  platform: psx
+  compiler: PSYQ
+  find_file_boundaries: False
+  gp_value: 0x8008CF6C
+  global_vram_start: 0x80010000
+  global_vram_end: 0x8009F6FC
+  o_as_suffix: True
+  use_legacy_include_asm: False
+  section_order: [".rodata", ".text", ".data", ".bss"]
+  subalign: 2
+  string_encoding: ASCII
+  data_string_encoding: ASCII
+  rodata_string_guesser_level: 2
+  data_string_guesser_level: 2
+segments:
+  - name: archive_before
+    type: pad
+    start: 0x0
+  - name: ov229
+    type: code
+    start: 0x6872800
+    vram: 0x800A0CB8
+    subsegments:
+      - [0x6872800, data]
+      - [0x6872804, asm]
+      - [0x687AA34, data]
+  - [0x687AE54]

@@ -1,0 +1,70 @@
+name: BIGFILE.BIG entry 231
+sha1: 5501bef2521df6a930d6bf4f8f3a951e56af8ab7
+options:
+  basename: ov231
+  target_path: disc/BIGFILE.BIG
+  base_path: ../..
+  asm_path: asm/ov231
+  src_path: src/ov231
+  asset_path: assets/ov231
+  build_path: build
+  ld_script_path: build/ov231.ld
+  symbol_addrs_path:
+    - config/symbols/scus_944.26.txt
+    - config/symbols/ov231.txt
+  undefined_funcs_auto_path: build/ov231.undefined_funcs_auto.txt
+  undefined_syms_auto_path: build/ov231.undefined_syms_auto.txt
+  platform: psx
+  compiler: PSYQ
+  find_file_boundaries: False
+  gp_value: 0x8008CF6C
+  global_vram_start: 0x80010000
+  global_vram_end: 0x8009F6FC
+  o_as_suffix: True
+  use_legacy_include_asm: False
+  section_order: [".rodata", ".text", ".data", ".bss"]
+  subalign: 2
+  string_encoding: ASCII
+  data_string_encoding: ASCII
+  rodata_string_guesser_level: 2
+  data_string_guesser_level: 2
+segments:
+  - name: archive_before
+    type: pad
+    start: 0x0
+  - name: ov231
+    type: code
+    start: 0x6886000
+    vram: 0x800AB9F0
+    subsegments:
+      - [0x6886000, data]
+      - [0x68860C0, asm]
+      - [0x688CF6C, data]
+      - [0x688D730, asm]
+      - [0x688DEEC, data]
+      - [0x688DEF4, asm]
+      - [0x688E1D0, data]
+      - [0x688E314, asm]
+      - [0x688FF78, data]
+      - [0x688FF94, asm]
+      - [0x6890954, data]
+      - [0x6890AD0, asm]
+      - [0x68910A4, data]
+      - [0x6891510, asm]
+      - [0x689193C, data]
+      - [0x6891948, asm]
+      - [0x6892130, data]
+      - [0x689219C, asm]
+      - [0x68926F4, data]
+      - [0x68927F8, asm]
+      - [0x68930DC, data]
+      - [0x6893210, asm]
+      - [0x68938B0, data]
+      - [0x68938BC, asm]
+      - [0x6893BF4, data]
+      - [0x6893C0C, asm]
+      - [0x68943B4, data]
+      - [0x689451C, asm]
+      - [0x68948C8, data]
+      - [0x68948D0, asm]
+  - [0x6894B58]
