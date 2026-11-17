@@ -17,7 +17,7 @@ Paths without a repository name (`game/...`, `docs/issues/...`, `tools/...`) are
   `7b4aac0bf2f6310984e599295df17b457da5a23b270c20200cefef6079efb838`. The PS-X EXE entry is
   `0x8007793C`, load is `0x80010000`, text size is `0x7D800`, executable extent is
   `[0x80010000,0x8008D800)`, and the header stack is `0x801FFFF0`.
-- where: `titles/ctr/README.md`; untracked extraction under `scratch/raw/ctr/`
+- where: `docs/images.md`; psx-crash-team-racing `titles/ctr/README.md`; untracked extraction under `scratch/raw/ctr/`
 - gap: None for executable identity. This does not prove a booting product.
 
 ### CTR-02 — Provision the selected disc and executable reproducibly
@@ -36,8 +36,9 @@ Paths without a repository name (`game/...`, `docs/issues/...`, `tools/...`) are
 - evidence: A separately built Beetle/Mednafen CPU executed the selected CTR crt0 to the
   InitHeap boundary after 92,378 instructions and agreed with an independent symbolic decoder on
   7/7 comparable fields. The fixture demonstrated both an executed positive case and a named
-  hardware-stop negative.
-- where: recorded evidence in `titles/ctr/README.md`
+  hardware-stop negative. Recorded comparison evidence then reaches `0x8003C58C`, `0x800779E4`,
+  `0x80032DC0`, `0x8001D06C`, `0x800718BC` and pre-instruction `0x800772E0`.
+- where: this entry; crt0 facts in `docs/images.md`
 - gap: The independent device-aware window stops before later gameplay initialization.
 
 ### CTR-04 — Preserve the current execution frontier
